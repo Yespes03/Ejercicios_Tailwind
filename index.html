@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio con Tailwind CSS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col items-center justify-center min-h-screen p-4">
+  <header class="text-center mb-8">
+    <h1 class="text-4xl font-bold text-blue-600">Bienvenido a Tailwind CSS 🎨</h1>
+    <p class="text-gray-600 mt-2">Proyecto base con estilos responsivos y modernos</p>
+  </header>
+
+  <main class="bg-white shadow-lg rounded-2xl p-6 w-full max-w-md">
+    <h2 class="text-2xl font-semibold mb-4 text-center">Botón Interactivo</h2>
+    <button id="boton" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg w-full">
+      ¡Haz clic aquí!
+    </button>
+    <p id="mensaje" class="text-center mt-4 text-gray-700"></p>
+  </main>
+
+  <footer class="mt-10 text-sm text-gray-500">
+    Desarrollado por <span class="font-semibold text-blue-600">Alejandro Vargas Cardoso</span>
+  </footer>
+
+  <script>
+    const boton = document.getElementById("boton");
+    const mensaje = document.getElementById("mensaje");
+    boton.addEventListener("click", () => {
+      mensaje.textContent = "¡Tailwind está funcionando correctamente! 🚀";
+      mensaje.classList.add("mostrar");
+    });
+  </script>
+</body>
+</html>
